@@ -6,5 +6,6 @@ USER root
 RUN apt update && apt -y upgrade && apt install -y python3 && apt install -y python3-pip && ln -s /usr/bin/python3 /usr/bin/python
 RUN npm i -f fsevents
 RUN npm install sqlite3 ep_hash_auth bcrypt
+RUN chown -R etherpad /opt/etherpad-lite/node_modules
 
 USER etherpad
